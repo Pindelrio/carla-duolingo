@@ -1,0 +1,6 @@
+<h3>Click to the image to know his word</h3>
+<img src="{{current.url}}" (click)="showImageName()">
+<p></p>
+<label *ngIf="current.mode === 'easy' && showName">{{current.name}}</label>
+<p></p>
+<button *ngIf="index+1 < photoItems.length" (click)="nextPhoto()">Next</button>

@@ -1,0 +1,11 @@
+<h1>Welcome to DuoCarla</h1>
+<p>choose a game: </p>
+<div id="games">
+  <a *ngFor="let item in games">
+    <button (click)="startGame(item)">
+      <h3>{{item.title}}</h3>
+    </button>
+  </a>
+  <Label [textContent]="frase"></Label>
+  <p>Hidden words: {{hiddenWordsNumber}}</p>
+</div>
