@@ -12,18 +12,33 @@ export class PhotoGameComponent implements OnInit {
   public current: PhotoGameItem;
   showName: boolean;
   index: number;
+  checkNameOk:boolean;
+  checkNameKo: boolean;
 
   constructor() {
     this.showName = false;
     this.photoItems = photoItemsList;
     this.index = 0;
     this.current = this.photoItems[this.index];
-
+    this.checkNameOk  = false;
+    this.checkNameKo = false;
   }
 
   ngOnInit(): void {
   }
 
+  checkNameOption(item: string){
+    if (item.toLowerCase() == this.current.name.toLowerCase())
+    {
+      this.checkNameKo = false;
+      this.checkNameOk = true;
+    }
+    else
+    {
+      this.checkNameKo = true;
+      this.checkNameOk =false
+    }
+  }
   showImageName(){
     this.showName = true;
   }

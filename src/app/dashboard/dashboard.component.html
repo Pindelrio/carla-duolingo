@@ -1,11 +1,16 @@
 <h1>Welcome to DuoCarla</h1>
 <p>choose a game: </p>
 <div id="games">
-  <a *ngFor="let item in games">
-    <button (click)="startGame(item)">
+  <a *ngFor="let item of games">
+    <button>
+      <a [title]="item.title" [routerLink]="['/photogame', item.id]">
       <h3>{{item.title}}</h3>
+      </a>
     </button>
   </a>
   <Label [textContent]="frase"></Label>
-  <p>Hidden words: {{hiddenWordsNumber}}</p>
+
+  <div id="words" *ngFor="let item of paraules">
+    <button (click)="clickWord(item)">{{item}}</button>
+  </div>
 </div>

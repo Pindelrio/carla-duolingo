@@ -1,6 +1,12 @@
 <h3>Click to the image to know his word</h3>
-<img src="{{current.url}}" (click)="showImageName()">
+<img src="{{current.url}}" (click)="showImageName()" height="500px" width="500px">
 <p></p>
-<label *ngIf="current.mode === 'easy' && showName">{{current.name}}</label>
+<label *ngIf="showName">{{current.name}}</label>
 <p></p>
+<label *ngIf="checkNameOk">You got it!</label>
+<label *ngIf="checkNameKo">You are wrong, try again!</label>
+
+<div *ngFor="let item of current.nameOptions">
+  <button (click)="checkNameOption(item)">{{item}}</button>
+</div>
 <button *ngIf="index+1 < photoItems.length" (click)="nextPhoto()">Next</button>

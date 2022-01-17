@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -16,7 +16,11 @@ import { PhotoGameComponent } from './games/photo-game/photo-game.component';
     PhotoGameComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: '', component: DashboardComponent },
+      { path: 'photogame/:gameId', component: PhotoGameComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
