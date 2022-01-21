@@ -6,6 +6,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PhotoGameComponent } from './games/photo-game/photo-game.component';
+import { PhraseGameComponent } from './games/phrase-game/phrase-game.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,14 +15,17 @@ import { PhotoGameComponent } from './games/photo-game/photo-game.component';
     TopBarComponent,
     FooterComponent,
     DashboardComponent,
-    PhotoGameComponent
+    PhotoGameComponent,
+    PhraseGameComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: DashboardComponent },
-      { path: 'photogame/:gameId', component: PhotoGameComponent}
-    ])
+      { path: 'photogame', component: PhotoGameComponent},
+      { path: 'phrasegame', component: PhraseGameComponent}
+    ]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

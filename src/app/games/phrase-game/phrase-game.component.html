@@ -1,0 +1,7 @@
+<Label [textContent]="phrase2print"></Label>
+
+  <div id="words" *ngFor="let item of hiddenWords">
+    <button (click)="clickOnWord(item)">{{item}}</button>
+  </div>
+  <p></p>
+  <button *ngIf="index+1 < phraseItems.length" (click)="nextPhoto()">Next</button>

@@ -1,16 +1,15 @@
 <h1>Welcome to DuoCarla</h1>
-<p>choose a game: </p>
+<p>Choose a game: </p>
 <div id="games">
-  <a *ngFor="let item of games">
     <button>
-      <a [title]="item.title" [routerLink]="['/photogame', item.id]">
-      <h3>{{item.title}}</h3>
+      <a [routerLink]="['/phrasegame']">
+        <h3>Phrase game</h3>
       </a>
     </button>
-  </a>
-  <Label [textContent]="frase"></Label>
-
-  <div id="words" *ngFor="let item of paraules">
-    <button (click)="clickWord(item)">{{item}}</button>
-  </div>
+    <p></p>
+    <button>
+      <a [routerLink]="['/photogame']">
+        <h3>Photo game</h3>
+      </a>
+    </button>
 </div>
