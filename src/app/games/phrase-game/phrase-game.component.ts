@@ -39,22 +39,33 @@ export class PhraseGameComponent implements OnInit {
           this.hiddenWords.push(element.substring(1,element.length));
         }
       });
+      this.hiddenWords.sort();
   }
 
   clickOnWord(item: string){
     let i=0;
+    let hiddens:string[] = [];
     for(let element of this.phrase2print.split(' '))
     {
       if (element == 'X')
       {
         if (this.words[i].substring(1,this.words[i].length) == item)
          { this.phrase2print = this.phrase2print.replace(element, item);
-          this.hiddenWords.shift();
-         }
+
+          for(let h of this.hiddenWords)
+          {
+            if (h != item)
+            {
+              hiddens.push(h);
+            }
+          }
+          this.hiddenWords = hiddens;
+        }
         else
-          alert("You're wrong, try again!");
+        alert("You're wrong, try again!");
         break;
       }
+
       i++;
     };
   }

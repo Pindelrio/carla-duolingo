@@ -1,15 +1,17 @@
-<h1>Welcome to DuoCarla</h1>
-<p>Choose a game: </p>
-<div id="games">
-    <button>
+<div class="dashboard">
+  <h1>Welcome to DuoCarla</h1>
+  <p>Choose a game: </p>
+  <div class="games">
+    <button mat-raised-button color="primary">
       <a [routerLink]="['/phrasegame']">
         <h3>Phrase game</h3>
       </a>
     </button>
     <p></p>
-    <button>
+    <button mat-raised-button color="primary">
       <a [routerLink]="['/photogame']">
         <h3>Photo game</h3>
       </a>
     </button>
+  </div>
 </div>

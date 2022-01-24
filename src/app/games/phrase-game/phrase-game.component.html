@@ -1,7 +1,10 @@
-<Label [textContent]="phrase2print"></Label>
+<div class="game">
 
+  <Label class="phrase" [textContent]="phrase2print"></Label>
+  <br>
   <div id="words" *ngFor="let item of hiddenWords">
-    <button (click)="clickOnWord(item)">{{item}}</button>
+    <button mat-raised-button color="primary" (click)="clickOnWord(item)">{{item}}</button>
   </div>
   <p></p>
-  <button *ngIf="index+1 < phraseItems.length" (click)="nextPhoto()">Next</button>
+  <button mat-raised-button *ngIf="index+1 < phraseItems.length" (click)="nextPhoto()">Next</button>
+</div>

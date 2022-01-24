@@ -1,12 +1,15 @@
-<h3>Click to the image to know his word</h3>
-<img src="{{current.url}}" (click)="showImageName()" height="500px" width="500px">
-<p></p>
-<label *ngIf="showName">{{current.name}}</label>
-<p></p>
-<label *ngIf="checkNameOk">You got it!</label>
-<label *ngIf="checkNameKo">You are wrong, try again!</label>
+<div class="game">
 
-<div *ngFor="let item of current.nameOptions">
-  <button (click)="checkNameOption(item)">{{item}}</button>
+  <h3>Click to the image to know his word</h3>
+  <img src="{{current.url}}" (click)="showImageName()" height="300px">
+  <p></p>
+  <label *ngIf="showName" class="word">{{current.name}}</label>
+  <p></p>
+  <label *ngIf="checkNameOk">You got it!</label>
+  <label *ngIf="checkNameKo">You are wrong, try again!</label>
+
+  <div *ngFor="let item of current.nameOptions">
+    <button mat-raised-button color="primary" (click)="checkNameOption(item)">{{item}}</button>
+  </div>
+  <button mat-raised-button *ngIf="index+1 < photoItems.length" (click)="nextPhoto()">Next</button>
 </div>
-<button *ngIf="index+1 < photoItems.length" (click)="nextPhoto()">Next</button>
