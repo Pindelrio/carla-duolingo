@@ -10,6 +10,7 @@ import { PhraseGameComponent } from './games/phrase-game/phrase-game.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { SortPhraseGameComponent } from './games/sort-phrase-game/sort-phrase-game.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +19,16 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     DashboardComponent,
     PhotoGameComponent,
-    PhraseGameComponent
+    PhraseGameComponent,
+    SortPhraseGameComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: DashboardComponent },
       { path: 'photogame', component: PhotoGameComponent},
-      { path: 'phrasegame', component: PhraseGameComponent}
+      { path: 'phrasegame', component: PhraseGameComponent},
+      { path: 'sortphrasegame', component: SortPhraseGameComponent}
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
