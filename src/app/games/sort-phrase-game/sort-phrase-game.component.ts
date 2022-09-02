@@ -15,7 +15,7 @@ export class SortPhraseGameComponent implements OnInit {
   constructor() {
     // this.phraseItems = phraseItemsList;
       this.phrase2print="";
-      this.phrase="la casa es la nostre llar";
+      this.phrase="Switch on your computer";
       this.unsortedPhrase = this.phrase.split(' ').sort(function(){ return 0.5-Math.random()});
   }
 
@@ -27,11 +27,6 @@ export class SortPhraseGameComponent implements OnInit {
   /* **************************************************** */
   /* Events                                               */
   /* **************************************************** */
-
-
-  /* **************************************************** */
-  /* Methods                                              */
-  /* **************************************************** */
   clickOnWord(item:string){
 
     if (this.phrase2print == "")
@@ -39,24 +34,7 @@ export class SortPhraseGameComponent implements OnInit {
       if (item == this.phrase.split(' ')[0])
       {
         this.phrase2print = this.phrase2print + item + " ";
-        let tempUnsortedPhrase=[];
-        let noRepeat=true;
-        for(let element of this.unsortedPhrase)
-        {
-          if(element!=item)
-          {
-            tempUnsortedPhrase.push(element)
-          }
-          else
-          {
-            if (noRepeat)
-            {
-              tempUnsortedPhrase.push(element)
-              noRepeat=false;
-            }
-          }
-        }
-        this.unsortedPhrase = tempUnsortedPhrase;
+        this.unsortedPhrase = this.checkPhrase(item);
       }
     }
     else
@@ -65,25 +43,35 @@ export class SortPhraseGameComponent implements OnInit {
       if (this.phrase2print + item == frase)
       {
         this.phrase2print = this.phrase2print + item + " ";
-
-        let tempUnsortedPhrase=[];
-        for(let element of this.unsortedPhrase)
-        {
-          if(element!=item)
-          {
-            tempUnsortedPhrase.push(element)
-          }
-        }
-        this.unsortedPhrase = tempUnsortedPhrase;
+        this.unsortedPhrase = this.checkPhrase(item);
       }
     }
-
-    // let splited = this.phrase2print.split(' ');
-    // let i=0;
-    // for(let element of this.phrase.split(' '))
-    // {
-    //     if (element == splited[])
-    // }
+  }
+  /* **************************************************** */
+  /* Methods                                              */
+  /* **************************************************** */
+  checkPhrase(item:string): string[]{
+    let tempUnsortedPhrase=[];
+    let noRepeat=true;
+    for(let element of this.unsortedPhrase)
+    {
+      if(element!=item)
+      {
+        tempUnsortedPhrase.push(element)
+      }
+      else
+      {
+        if (noRepeat)
+        {
+          noRepeat=false;
+        }
+        else
+        {
+          tempUnsortedPhrase.push(element)
+        }
+      }
+    }
+    return tempUnsortedPhrase;
   }
 
   /* **************************************************** */

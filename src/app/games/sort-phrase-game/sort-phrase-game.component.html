@@ -3,9 +3,11 @@
   <label for=""></label>
   <Label class="phrase" [textContent]="phrase2Print"></Label>
   <br>
-  <div id="words" *ngFor="let item of phraseItems">
-    <button mat-raised-button color="primary" (click)="clickOnWord(item)">{{item}}</button>
+  <div>
+
+    <div id="words" *ngFor="let item of phraseItems" class="center">
+      <button mat-raised-button color="primary" (click)="clickOnWord(item)" >{{item}}</button>
+    </div>
   </div>
   <p></p>
-  <!-- <button mat-raised-button *ngIf="index+1 < phraseItems.length" (click)="nextPhoto()">Next</button> -->
 </div>
