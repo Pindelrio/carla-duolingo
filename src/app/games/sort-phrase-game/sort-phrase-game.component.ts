@@ -10,13 +10,16 @@ export class SortPhraseGameComponent implements OnInit {
 
   phrase:string;
   phrase2print:string;
+  phrase2PrintTranslate:string;
   unsortedPhrase:string[];
+
 
   constructor() {
     // this.phraseItems = phraseItemsList;
       this.phrase2print="";
-      this.phrase="Switch on your computer";
+      this.phrase="Casa meva es la casa mes bonica de la vila";
       this.unsortedPhrase = this.phrase.split(' ').sort(function(){ return 0.5-Math.random()});
+      this.phrase2PrintTranslate ="Engega l'ordinador";
   }
 
   ngOnInit(): void {
@@ -84,5 +87,9 @@ export class SortPhraseGameComponent implements OnInit {
 
   get phrase2Print(): string{
     return this.phrase2print;
+  }
+
+  get phraseCompleted(): boolean{
+    return this.phrase2print.trim().length == this.phrase.trim().length;
   }
 }

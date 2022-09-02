@@ -1,13 +1,18 @@
 <div class="game">
 
-  <label for=""></label>
-  <Label class="phrase" [textContent]="phrase2Print"></Label>
-  <br>
-  <div>
+  <div class="phrase2Print">
+    <Label class="phrase" [textContent]="phrase2Print"></Label>
+    <p></p>
+    <Label *ngIf="phraseCompleted" class="phrase" [textContent]="phrase2PrintTranslate"></Label>
+  </div>
 
-    <div id="words" *ngFor="let item of phraseItems" class="center">
-      <button mat-raised-button color="primary" (click)="clickOnWord(item)" >{{item}}</button>
+  <div class="WordsContainer">
+    <div id="words" *ngFor="let item of phraseItems">
+
+      <button mat-raised-button color="primary" (click)="clickOnWord(item)"  class="words">{{item}}</button>
     </div>
+    <div class="clearfix"></div>
   </div>
   <p></p>
+
 </div>

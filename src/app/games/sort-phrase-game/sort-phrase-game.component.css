@@ -1,4 +1,20 @@
-.center {
+.phrase2Print{
+  margin: 50px;
+  border: 1px solid;
   text-align: center;
-  border: 3px solid green;
+}
+.WordsContainer{
+  display: block;
+  margin: 250px;
+  border: 1px solid;
+  text-align: center;
+}
+.words{
+  float: left;
+  margin: 10px;
+  text-align: center;
+}
+.clearfix{
+  float: none;
+  clear: both;
 }
