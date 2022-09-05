@@ -9,9 +9,13 @@ import { PhotoGameComponent } from './games/photo-game/photo-game.component';
 import { PhraseGameComponent } from './games/phrase-game/phrase-game.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule} from '@angular/material/button';
 import { SortPhraseGameComponent } from './games/sort-phrase-game/sort-phrase-game.component';
 import { OneMatchGameComponent } from './games/one-match-game/one-match-game.component';
+import { GamesMenuComponent } from './games/games-menu/games-menu.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { OneMatchGameComponent } from './games/one-match-game/one-match-game.com
     PhotoGameComponent,
     PhraseGameComponent,
     SortPhraseGameComponent,
-    OneMatchGameComponent
+    OneMatchGameComponent,
+    GamesMenuComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,10 @@ import { OneMatchGameComponent } from './games/one-match-game/one-match-game.com
       { path: 'photogame', component: PhotoGameComponent},
       { path: 'phrasegame', component: PhraseGameComponent},
       { path: 'sortphrasegame', component: SortPhraseGameComponent},
-      { path: 'onematchgame', component: OneMatchGameComponent}
+      { path: 'onematchgame', component: OneMatchGameComponent},
+      { path: 'gamesmenu', component: GamesMenuComponent},
+      { path: 'about', component: AboutComponent},
+      { path: 'contact', component: ContactComponent}
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
