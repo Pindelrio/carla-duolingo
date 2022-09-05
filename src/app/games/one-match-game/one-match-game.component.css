@@ -1,0 +1,18 @@
+.matchString{
+  margin: 50px;
+  text-align: center;
+}
+.randomStrings{
+  display: block;
+  margin: 50px;
+  border: 1px solid;
+  text-align: center;
+}
+.words{
+  float: left;
+  margin: 10px;
+}
+.clearfix{
+  float: none;
+  clear: both;
+}

@@ -1,0 +1,18 @@
+<div class="game">
+
+  <div class="matchString">
+    <div *ngIf="finded">{{MatchString}}</div>
+  </div>
+
+  <br>
+
+  <div class="randomStrings">
+    <div id="words" *ngFor="let item of RandomStrings">
+      <button mat-raised-button color="primary" (click)="clickOnWord(item)"  class="words">{{item}}</button>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <p></p>
+
+</div>

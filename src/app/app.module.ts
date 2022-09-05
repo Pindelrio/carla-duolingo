@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { SortPhraseGameComponent } from './games/sort-phrase-game/sort-phrase-game.component';
+import { OneMatchGameComponent } from './games/one-match-game/one-match-game.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SortPhraseGameComponent } from './games/sort-phrase-game/sort-phrase-ga
     DashboardComponent,
     PhotoGameComponent,
     PhraseGameComponent,
-    SortPhraseGameComponent
+    SortPhraseGameComponent,
+    OneMatchGameComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { SortPhraseGameComponent } from './games/sort-phrase-game/sort-phrase-ga
       { path: '', component: DashboardComponent },
       { path: 'photogame', component: PhotoGameComponent},
       { path: 'phrasegame', component: PhraseGameComponent},
-      { path: 'sortphrasegame', component: SortPhraseGameComponent}
+      { path: 'sortphrasegame', component: SortPhraseGameComponent},
+      { path: 'onematchgame', component: OneMatchGameComponent}
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
