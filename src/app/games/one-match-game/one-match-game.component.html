@@ -1,4 +1,4 @@
-<div class="game">
+<div class="row justify-content-center">
   <br><br><br><br>
   <br><br><br><br>
   <div class="matchString">
@@ -7,16 +7,14 @@
     <div *ngIf="finded">{{MatchString}}</div>
   </div>
 
-  <br>
+  <br><br>
 
-  <div class="randomStrings" *ngIf="!finded">
+  <div class="col-md-6 col-lg-4 mb-5 mt-5" *ngIf="!finded">
     <div id="words" *ngFor="let item of RandomStrings">
-      <button mat-raised-button color="primary" (click)="clickOnWord(item)" on  class="words">{{item}}</button>
+      <button mat-raised-button color="primary" (click)="clickOnWord(item)"  class="words">{{item}}</button>
     </div>
-    <div class="clearfix"></div>
   </div>
 
   <p></p>
   <button mat-raised-button color="primary" *ngIf="ShowNext" (click)="next()" class="next">Next</button>
-  <div class="clearfix"></div>
 </div>

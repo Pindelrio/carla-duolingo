@@ -1,4 +1,4 @@
-<div class="game">
+<div class="row justify-content-center">
   <br><br><br><br>
   <div class="phrase2Print">
     <Label class="phrase" [textContent]="phrase2Print"></Label>
@@ -7,7 +7,7 @@
     <Label *ngIf="phraseCompleted" class="phrase" [textContent]="PhraseTranslate"></Label>
   </div>
 
-  <div class="WordsContainer">
+  <div class="col-md-6 col-lg-4 mb-5 mt-5">
     <div id="words" *ngFor="let item of phraseItems">
 
       <button mat-raised-button color="primary" (click)="clickOnWord(item)"  class="words">{{item}}</button>

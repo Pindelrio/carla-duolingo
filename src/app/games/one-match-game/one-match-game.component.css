@@ -1,10 +1,11 @@
 .matchString{
   font-size: xx-large;
   font-stretch: expanded;
-  padding: 50px;
-  margin: 250px;
+  padding: 30px;
+  margin-top: 140px;
   border: 2px darkgrey dashed;
   text-align: center;
+  line-height : 35px;
 }
 .randomStrings{
   display: block;
@@ -12,13 +13,15 @@
 }
 .words{
   float: left;
-  margin: 10px;
+  padding: 10px;
+  margin: 15px;
 }
 .clearfix{
   float: none;
   clear: both;
 }
 .next{
-  margin-left: 250px;
-  margin-bottom: 50px;
+  width: 50%;
+  padding: 10px;
+  margin: 15px;
 }

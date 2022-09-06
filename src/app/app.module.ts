@@ -15,7 +15,6 @@ import { OneMatchGameComponent } from './games/one-match-game/one-match-game.com
 import { GamesMenuComponent } from './games/games-menu/games-menu.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { UploadComponent } from './upload/upload.component';
 
 
 @NgModule({
@@ -30,8 +29,7 @@ import { UploadComponent } from './upload/upload.component';
     OneMatchGameComponent,
     GamesMenuComponent,
     AboutComponent,
-    ContactComponent,
-    UploadComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +41,7 @@ import { UploadComponent } from './upload/upload.component';
       { path: 'onematchgame', component: OneMatchGameComponent},
       { path: 'gamesmenu', component: GamesMenuComponent, data:{title: 'Games Menu'}},
       { path: 'about', component: AboutComponent},
-      { path: 'contact', component: ContactComponent},
-      { path: 'upload', component: UploadComponent}
+      { path: 'contact', component: ContactComponent}
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
