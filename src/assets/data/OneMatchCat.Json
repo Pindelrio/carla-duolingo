@@ -1,0 +1,23 @@
+[
+    {
+     "catala": "Casa",
+     "traduccio":"House",
+     "angles1": "Table",
+     "angles2": "House",
+     "angles3": "Chair"
+    },
+    {
+     "catala": "Camí",
+     "traduccio":"Road",
+     "angles1": "Road",
+     "angles2": "Tree",
+     "angles3": "House"
+    },
+    {
+     "catala": "Nen",
+     "traduccio":"Child",
+     "angles1": "Man",
+     "angles2": "Woman",
+     "angles3": "Child"
+    }
+   ]

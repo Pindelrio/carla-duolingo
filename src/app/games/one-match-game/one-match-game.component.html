@@ -1,7 +1,9 @@
 <div class="game">
-
+  <br><br><br><br>
+  <br><br><br><br>
   <div class="matchString">
-    <div *ngIf="finded">{{MatchString}}</div>
+    <div>{{ShowString}}</div>
+    <div *ngIf="finded">Correct!</div>
   </div>
 
   <br>
@@ -14,5 +16,6 @@
   </div>
 
   <p></p>
-
+  <button mat-raised-button color="primary" *ngIf="ShowNext" (click)="next()" class="next">Next</button>
+  <div class="clearfix"></div>
 </div>
