@@ -2,8 +2,9 @@
   <br><br><br><br>
   <div class="phrase2Print">
     <Label class="phrase" [textContent]="phrase2Print"></Label>
-    <p></p>
-    <Label *ngIf="phraseCompleted" class="phrase" [textContent]="phrase2PrintTranslate"></Label>
+    <br>
+    <br>
+    <Label *ngIf="phraseCompleted" class="phrase" [textContent]="PhraseTranslate"></Label>
   </div>
 
   <div class="WordsContainer">
@@ -14,5 +15,5 @@
     <div class="clearfix"></div>
   </div>
   <p></p>
-
+  <button mat-raised-button color="primary" *ngIf="ShowNext" (click)="next()" class="next">Next</button>
 </div>

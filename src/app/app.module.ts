@@ -41,7 +41,7 @@ import { UploadComponent } from './upload/upload.component';
       { path: 'phrasegame', component: PhraseGameComponent},
       { path: 'sortphrasegame', component: SortPhraseGameComponent},
       { path: 'onematchgame', component: OneMatchGameComponent},
-      { path: 'gamesmenu', component: GamesMenuComponent},
+      { path: 'gamesmenu', component: GamesMenuComponent, data:{title: 'Games Menu'}},
       { path: 'about', component: AboutComponent},
       { path: 'contact', component: ContactComponent},
       { path: 'upload', component: UploadComponent}

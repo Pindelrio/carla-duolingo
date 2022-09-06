@@ -1,13 +1,14 @@
 .phrase2Print{
-  margin: 50px;
-  border: 1px solid;
+  font-size: xx-large;
+  font-stretch: expanded;
+  padding: 50px;
+  margin: 250px;
+  border: 2px darkgrey dashed;
   text-align: center;
 }
 .WordsContainer{
   display: block;
-  margin: 250px;
-  border: 1px solid;
-  text-align: center;
+  margin-left: 300px;  
 }
 .words{
   float: left;
@@ -17,4 +18,8 @@
 .clearfix{
   float: none;
   clear: both;
+}
+.next{
+  margin-left: 250px;
+  margin-bottom: 50px;
 }

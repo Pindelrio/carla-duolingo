@@ -1,12 +1,14 @@
 .matchString{
-  margin: 50px;
+  font-size: xx-large;
+  font-stretch: expanded;
+  padding: 50px;
+  margin: 250px;
+  border: 2px darkgrey dashed;
   text-align: center;
 }
 .randomStrings{
   display: block;
-  margin: 50px;
-  border: 1px solid;
-  text-align: center;
+  margin-left: 300px;  
 }
 .words{
   float: left;
@@ -17,10 +19,6 @@
   clear: both;
 }
 .next{
-  margin: 10px;
-  position: absolute;
-  
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin-left: 250px;
+  margin-bottom: 50px;
 }
